@@ -2,34 +2,36 @@ import React,{Component} from 'react';
 import Keypad from './Keypad';
 import Result from './Result';
 class Calculator extends Component{
-    state ={
-        result:''
+    constructor(){
+        super();
+    this.state ={
+        result:""
     }
-    onClick=(event)=>{
+}
+    onClick= event =>{
         if(event==='clear'){
-                this.clear();
+                this.clear()
         }
         else if(event==='=')
-       this.equal();
+       this.equal()
         else{
             this.setState({result:this.state.result+event})
         }
-    }
-     clear=()=>{
-        this.setState({
-        result:this.state.result.slice(0,-1)});
-    }
+    };
+     clear=()=> {
+         console.log(this.state.result)
+        this.setState({result:this.state.result.slice(0,-1)})
+    };
     equal=()=>{
-        let r=toString(eval(this.state.result));
         this.setState({
-            result:r
+             result:eval(this.state.result)+""
         })
     }
     render(){
         return(
             <div>
             <Result result={this.state.result}></Result>
-            <Keypad onClick={(event)=>this.onClick(event)}></Keypad>
+            <Keypad onClick={this.onClick}></Keypad>
             </div>
         );
     }

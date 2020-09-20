@@ -1,0 +1,28 @@
+
+button{
+    width:25%;
+    height:60px;
+    font-size: 40px;
+        border-color: rgb(236, 120, 188);
+}
+#clear{
+    width: 75%;
+}
+.result{
+
+    display: block;
+    height: 60px;
+    background-color: rgb(65, 64, 64);
+    width: 100%;
+    font-size: 40px;
+    color:white;
+}
+.button{
+    display: block;
+    block-size: 100px 100px;
+    border-color: rgb(236, 120, 188); 
+    height: 80px;
+}
+.oper{
+    background-color:rgba(240, 8, 104, 0.795) ;
+}
